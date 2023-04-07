@@ -15,9 +15,9 @@ public enum Weekday {
     }
 
     boolean isWeekDay(){
-        if(Weekday.values().equals("WeekDay"))
+        return this.index.equalsIgnoreCase("WeekDay");
     }
     boolean isHoliday(){
-        return Weekday.index.equals("DayOff");
+        return this.index.equalsIgnoreCase("DayOff");
     }
 }
