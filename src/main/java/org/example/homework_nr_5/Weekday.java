@@ -14,10 +14,19 @@ public enum Weekday {
         this.index =index;
     }
 
-    boolean isWeekDay(){
-        return this.index.equalsIgnoreCase("WeekDay");
+    public boolean isWeekDay() {
+        if (this != SATURDAY || this != SUNDAY) {
+            return true;
+        } else {
+            return false;
+        }
     }
-    boolean isHoliday(){
-        return this.index.equalsIgnoreCase("DayOff");
+
+    boolean isHoliday() {
+        if (this == SATURDAY || this == SUNDAY) {
+            return true;
+        } else {
+            return false;
+        }
     }
 }
