@@ -1,0 +1,37 @@
+create table customer_information(
+customer_id serial primary key,
+name varchar(20),
+surname varchar(20),
+phone_number varchar(20),
+is_active boolean);
+
+select * from customer_information ci ;
+
+insert into customer_information (name,surname,phone_number,is_active)
+values('Eugen','Doga','079643197',true),
+('John','Brzenk','069784512',true),
+('Michael','Tod','068569933',false),
+('Oleg','Cercasov','079718171',true),
+('Artem','Levitchii','079674044',false),
+('Kirdagli','Ongobaev','068555688',true),
+('Davon','Larrat','079636261',true),
+('Levan','Saginashvili','060444123',true),
+('Larry','Wheels','060132014',true),
+('Daniel','Procopciuc','078888822',false);
+
+select * from customer_information ci
+where customer_id <=5;
+
+select * from customer_information ci
+where name like 'A%';
+
+select * from customer_information ci
+where name like 'V%a%R';
+
+select
+count(is_active)
+from  customer_information ci
+where is_active = true;
+
+select name,phone_number
+from customer_information ci ;
